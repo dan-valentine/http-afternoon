@@ -93,8 +93,9 @@ In this section we will try to describe each endpoint and the expected results.
 #### Endpoints
 
 Method: GET<br>
-`/api/user/:id` - Returns one user object if the id matches a user in the database.<br><br>
-`/api/users` - Returns an array with 10 users paginated. Also accepts a query for searching users.(e.g.`/api/blogs?q=placeholder`)<br><br>
+*`/api/user/:id` 
+    * Returns one user object if the id matches a user in the database.<br><br>
+`/api/users` - Returns an array with 10 users paginated. Also accepts a query for searching users. (e.g.`/api/blogs?q=placeholder`)<br><br>
 `/api/blog/:id` - Returns one blog object if the id matcher a blog in the database.<br><br>
 `/api/blogs` - Returns an array with 10 blogs paginated. Also accepts a query for searching blogs. (e.g. `/api/blogs?q=placeholder`)<br><br>
 `/api/featured` - Returns an array with the blogs marked as featured.<br><br>
