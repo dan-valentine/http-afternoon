@@ -52,7 +52,7 @@ class NewUser extends Component{
                         this.state.id >= 0
                         ?
                         <span>
-                            <button className='delete-button'>Delete User</button>
+                            <button onClick={()=>this.deleteUser()} className='delete-button'>Delete User</button>
                             <button type='submit'>Update</button>
                         </span>
                         :

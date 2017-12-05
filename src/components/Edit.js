@@ -18,7 +18,7 @@ class Edit extends Component {
         this.no = this.no.bind(this);
     }
 
-    // insert componentWillMount
+    // insert componentDidMount
 
     
     // insert updatePost 

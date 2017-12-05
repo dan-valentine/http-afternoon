@@ -14,7 +14,7 @@ class User extends Component{
         }
     }
 
-    // insert componentWillMount
+    // insert componentDidMount
     
 
     render(){
