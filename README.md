@@ -93,24 +93,24 @@ In this section we will try to describe each endpoint and the expected results.
 #### Endpoints
 
 Method: GET<br>
-`/api/user/:id` - Returns one user object if the id matches a user in the database.<br>
-`/api/users` - Returns an array with 10 users paginated. Also accepts a query for searching users.`/api/blogs?q=placeholder`<br>
-`/api/blog/:id` - Returns one blog object if the id matcher a blog in the database.<br>
-`/api/blogs` - Returns an array with 10 blogs paginated. Also accepts a query for searching blogs.`/api/blogs?q=placeholder`<br>
-`/api/featured` - Returns an array with the blogs marked as featured.<br>
-`/api/blogs/user/:id` - Returns an array with all the blogs authored by the user indicated by the id param.<br>
+`/api/user/:id` - Returns one user object if the id matches a user in the database.<br><br>
+`/api/users` - Returns an array with 10 users paginated. Also accepts a query for searching users.(e.g.`/api/blogs?q=placeholder`)<br><br>
+`/api/blog/:id` - Returns one blog object if the id matcher a blog in the database.<br><br>
+`/api/blogs` - Returns an array with 10 blogs paginated. Also accepts a query for searching blogs. (e.g. `/api/blogs?q=placeholder`)<br><br>
+`/api/featured` - Returns an array with the blogs marked as featured.<br><br>
+`/api/blogs/user/:id` - Returns an array with all the blogs authored by the user indicated by the id param.<br><br>
 
 Method: POST<br>
-`/api/users/` - Returns an object with the new user information including the id.<br>
-`/api/blogs/` - Returns an object with the new blog post information including the id.<br>
+`/api/users/` - Returns an object with the new user information including the id.<br><br>
+`/api/blogs/` - Returns an object with the new blog post information including the id.<br><br>
 
 Method: PUT<br>
-`/api/user/:id` - Returns an object with the updated user.<br>
-`/api/blog/:id` - Returns an object with the updated blog post.<br>
+`/api/user/:id` - Returns an object with the updated user.<br><br>
+`/api/blog/:id` - Returns an object with the updated blog post.<br><br>
 
 Method: DELETE<br>
-`/api/user/:id` - Returns an empty object after deleting the indicated user.<br>
-`/api/blog/:id` - Returns an empty object after deleting the indicated blog post. <br>
+`/api/user/:id` - Returns an empty object after deleting the indicated user.<br><br>
+`/api/blog/:id` - Returns an empty object after deleting the indicated blog post. <br><br>
 
 #### Data Models
 
