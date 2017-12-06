@@ -93,24 +93,44 @@ In this section we will try to describe each endpoint and the expected results.
 #### Endpoints
 
 Method: GET<br>
-* `/api/user/:id` Returns one user object if the id matches a user in the database.<br><br>
-`/api/users` - Returns an array with 10 users paginated. Also accepts a query for searching users. (e.g.`/api/blogs?q=placeholder`)<br><br>
-`/api/blog/:id` - Returns one blog object if the id matcher a blog in the database.<br><br>
-`/api/blogs` - Returns an array with 10 blogs paginated. Also accepts a query for searching blogs. (e.g. `/api/blogs?q=placeholder`)<br><br>
-`/api/featured` - Returns an array with the blogs marked as featured.<br><br>
-`/api/blogs/user/:id` - Returns an array with all the blogs authored by the user indicated by the id param.<br><br>
+`/api/user/:id` 
+* Returns one user object if the id matches a user in the database.
+
+`/api/users` 
+* Returns an array with 10 users paginated. Also accepts a query for searching users. (e.g.`/api/blogs?q=placeholder`)
+
+`/api/blog/:id`
+* Returns one blog object if the id matcher a blog in the database.
+
+`/api/blogs`
+* Returns an array with 10 blogs paginated. Also accepts a query for searching blogs. (e.g. `/api/blogs?q=placeholder`)
+
+`/api/featured`
+* Returns an array with the blogs marked as featured.
+
+`/api/blogs/user/:id`
+* Returns an array with all the blogs authored by the user indicated by the id param.
 
 Method: POST<br>
-`/api/users/` - Returns an object with the new user information including the id.<br><br>
-`/api/blogs/` - Returns an object with the new blog post information including the id.<br><br>
+`/api/users/` 
+*Returns an object with the new user information including the id.
+
+`/api/blogs/` 
+* Returns an object with the new blog post information including the id.
 
 Method: PUT<br>
-`/api/user/:id` - Returns an object with the updated user.<br><br>
-`/api/blog/:id` - Returns an object with the updated blog post.<br><br>
+`/api/user/:id`
+* Returns an object with the updated user.
+
+`/api/blog/:id` 
+* Returns an object with the updated blog post.
 
 Method: DELETE<br>
-`/api/user/:id` - Returns an empty object after deleting the indicated user.<br><br>
-`/api/blog/:id` - Returns an empty object after deleting the indicated blog post. <br><br>
+`/api/user/:id` 
+*Returns an empty object after deleting the indicated user.
+
+`/api/blog/:id` 
+*Returns an empty object after deleting the indicated blog post. 
 
 #### Data Models
 
@@ -245,14 +265,6 @@ Map over `this.state.userResults`, passing each element into `<UserTile />`. Be 
 
 Lastly, add a `.catch(console.log)` to the end of `.then` for error reporting.
 
-#### Bonus
-
-You'll notice that if we hit the back arrow our search history isn't preserved. To remedy that, paste this line into the top of your `if` and `else` statements: 
-
-```javascript
-this.props.history.push(makeQuery('/search?',{q:searchTerm,type:searchType}))
-```
-
 
 <details>
 <summary><b>Code Solution</b></summary>
@@ -267,13 +279,11 @@ search(e){
         
         axios.get(`/api/${searchType}?q=${searchTerm}`).then(response=>{
             if(searchType==='blogs'){
-                this.props.history.push(makeQuery('/search?',{q:searchTerm,type:searchType}))
                 this.setState({
                     blogResults: response.data,
                     userResults: []
                 })
             }else{
-                this.props.history.push(makeQuery('/search?',{q:searchTerm,type:searchType}))
                 this.setState({
                     blogResults: [],
                     userResults: response.data
