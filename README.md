@@ -113,7 +113,7 @@ Method: GET<br>
 
 Method: POST<br>
 `/api/users/` 
-*Returns an object with the new user information including the id.
+* Returns an object with the new user information including the id.
 
 `/api/blogs/` 
 * Returns an object with the new blog post information including the id.
@@ -127,10 +127,10 @@ Method: PUT<br>
 
 Method: DELETE<br>
 `/api/user/:id` 
-*Returns an empty object after deleting the indicated user.
+* Returns an empty object after deleting the indicated user.
 
 `/api/blog/:id` 
-*Returns an empty object after deleting the indicated blog post. 
+* Returns an empty object after deleting the indicated blog post. 
 
 #### Data Models
 
